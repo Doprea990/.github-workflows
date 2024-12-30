@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>Formulario de Altavoces</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</body>
+        <form action="procesar_formulario.php" method="post">
+            <label for="modelo">Modelo:</label>
+            <select id="modelo" name="modelo" required>
+                <option value="R4">R4</option>
+                <option value="R5">R5</option>
+                <option value="SR1">SR1</option>
+            <select>
+
+            <label for="potencia">Potencia máxima (entre 50 y 100):</label>
+            <input type="number" id="potencia" name="potencia" min="50" max="100" required>
+
+            <label for="bluetooth">¿Bluetooth?</label>
+            <input type="checkbox" id="bluetooth" name="bluetooth">
+
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+</html>
