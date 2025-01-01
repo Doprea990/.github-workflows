@@ -11,14 +11,6 @@
             background-color: white;
             padding: 20px;
         }
-        form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px;
-            max-width: 400px;
-            margin: auto;
-        }
         input[type="text"],
         input[type="numbre"],
         select {
@@ -29,5 +21,45 @@
             border-radius: 4px;
         }
         input[type="submit"] {
-
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 4px;
         }
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+        </style>
+        </head>
+        <body>
+
+            <h2> Camara de fotos</h2>
+            <form action="/camara-fotos" method="get">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" placeholder="EJ. Sony, Leica, Canon">
+
+                <label for="tipo">Tipo Camara:</label>
+                <select type="tipo" id="tipo">
+                <option value="">-- Selecciona tipo de camara --</option>
+                <option value="reflex">Camara reflex</option>
+                <option value="bridge">Camaras bridge</option>
+                </select>
+
+                <label for="precio_min">Precio Minimo:</label>
+                <input type="number" id="precio_min" name="precio_min" placeholder="100">
+
+                <label for="precio_max">Precio Maximo:</label>
+                <input type="number" id="precio_max" name="precio_max" placeholder="2000">
+                
+                <label for="resolucion">Resolucion (en megapixeles):</label>
+                <input type="number" id="resolucion" name="resolucion" placeholder="10MP">
+                
+                <label for="caracteristicas">caracteristicas</label>
+                <input type="text" id="caracteristicas" name="caracteristicas" placeholder="4k, 2k, Objetivo">
+
+                <input type="submit" value="Buscar Camara">
+                </form>
+</body>
+</html>
